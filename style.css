@@ -1,0 +1,299 @@
+/* ========================================
+   LE FOURNIL DE LÉA — FEUILLE DE STYLE
+   ======================================== */
+
+/* 1. Variables et styles généraux */
+:root {
+    --couleur-foncee: #9b6330;
+    --couleur-claire: #f3d9a8;
+    --couleur-fond: #f9f1e0;
+    --couleur-carte: #fbf3e4;
+    --couleur-texte-accent: #794916;
+    --couleur-hover: #fff0db;
+    --espace: 1.5rem;
+    --rayon: 8px;
+    font-family: Calibri, Arial, sans-serif;
+    background-color: var(--couleur-fond);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    padding: 0 16px;
+}
+
+section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--couleur-foncee);
+    margin-top: var(--espace);
+}
+
+/* 2. En-tête et navigation */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--couleur-claire);
+    color: var(--couleur-foncee);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 30px;
+    gap: 16px;
+    background-color: var(--couleur-foncee);
+    color: var(--couleur-claire);
+}
+
+.logo {
+    flex-shrink: 0;
+    margin: 8px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    font-size: 18px;
+}
+
+nav a {
+    color: var(--couleur-claire);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.panier {
+    margin: 0;
+}
+
+#intro {
+    padding: 12px 16px;
+}
+
+/* 3. Cartes des produits */
+#produits {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.produit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 12px;
+    border: 2px solid var(--couleur-foncee);
+    border-radius: var(--rayon);
+    background-color: var(--couleur-carte);
+}
+
+.produit h3 {
+    margin: 5px 0 12px;
+    color: var(--couleur-texte-accent);
+    text-align: center;
+}
+
+.produit p {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.produit img {
+    display: block;
+    width: 80%;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
+.produit .prix {
+    margin-top: auto;
+    color: var(--couleur-foncee);
+    font-weight: bold;
+    text-align: center;
+}
+
+.produit .produit-bouton {
+    width: 100%;
+}
+
+/* 4. Boutons et éléments masqués */
+button {
+    min-height: 44px;
+    margin: 5px 0;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--couleur-foncee);
+    color: var(--couleur-hover);
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+    border-color: var(--couleur-foncee);
+    background-color: var(--couleur-hover);
+    color: var(--couleur-foncee);
+}
+
+button:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid var(--couleur-texte-accent);
+    outline-offset: 3px;
+}
+
+.cache {
+    display: none;
+}
+
+/* 5. Horaires */
+#horaires table {
+    width: 100%;
+    max-width: 350px;
+    border-collapse: collapse;
+}
+
+#horaires th,
+#horaires td {
+    padding: 8px;
+    border-bottom: 1px solid var(--couleur-foncee);
+    text-align: left;
+}
+
+#horaires th {
+    border-bottom-width: 2px;
+}
+
+/* 6. Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid var(--couleur-foncee);
+    border-radius: var(--rayon);
+    font: inherit;
+    font-size: 18px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    min-width: 150px;
+}
+
+/* 7. Pied de page */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: var(--espace);
+    padding: 12px 16px;
+    background-color: var(--couleur-claire);
+    color: var(--couleur-foncee);
+}
+
+footer a {
+    color: var(--couleur-foncee);
+}
+
+/* 8. Responsive — tablette */
+@media (max-width: 900px) {
+    #produits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    nav {
+        padding: 8px 16px;
+    }
+
+    #menu {
+        font-size: 16px;
+        gap: 10px 14px;
+    }
+}
+
+/* 9. Responsive — mobile */
+@media (max-width: 600px) {
+    main {
+        padding: 0 12px;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding: 10px 12px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    #menu {
+        justify-content: center;
+        gap: 10px 14px;
+        padding: 6px 0;
+        font-size: 14px;
+    }
+
+    #produits {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .produit {
+        padding: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    footer p {
+        margin: 0;
+    }
+}

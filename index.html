@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Fournil de Léa - Boulangerie de quartier </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <!--L'EN-TÊTE-->
+    <header>
+        <!--LE MENU-->
+        <nav>
+            <p class="logo">Le Fournil</p>
+            <ul id="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Nos produits</a></li>
+                <li><a href="#horaires">Nos horaires</a></li>
+                <li><a href="#nous-ecrire">Nous écrire</a></li>
+                <p class="panier">Panier : <span id="compteur">0</span></p> 
+            </ul>
+        </nav>
+        <section id="intro">
+            <h1>Le Fournil de Léa</h1>
+            <p>Boulangerie  de quartier : pains au levain et viennoiseries maison.</p>
+        </section>
+    </header>
+    <main>
+        <!--QUI SOMMES-NOUS ?-->
+        <section id="accueil">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Léa a ouvert le Fournil en 2019, au coin de la rue des Lilas. Chaque nuit, elle pétrit, façonne et 
+            cuit sur place. Ici, pas de pâte surgelée : tout part de la farine.</p>
+            <ul>
+                <li>Des farines bio d'un moulin voisin</li>
+                <li>Un levain naturel, nourri chaque jour</li>
+                <li>Une cuisson sur place, tous les matins</li>
+            </ul>
+        </section>
+        <!--NOS PRODUITS-->
+            <section>
+            <h2 >Nos produits</h2>
+            <div id="produits">
+                <article class="produit">
+                    <h3>Pain au levain</h3>
+                    <img src="ressources/images/pain-au-levain.svg" alt="Une croûte épaisse, une mie souple. Il se garde quatre jours.">
+                    <p>Une croûte épaisse, une mie souple. Il se garde quatre jours.</p>
+                    <p class="prix">4,20 €</p>
+                    <button type="button" class="produit-bouton">Commander</button>
+                </article>
+                <article class="produit">
+                    <h3>Croissant</h3>
+                    <img src="ressources/images/croissant.svg" alt="Une croûte épaisse, une mie souple. Il se garde quatre jours.">
+                    <p>Pur beurre, feuilleté à la main.</p>
+                    <p class="prix">1,30 €</p>  
+                    <button type="button" class="produit-bouton">Commander</button>  
+                </article>
+                <article class="produit">
+                    <h3>Tarte aux pommes</h3>
+                    <img src="ressources/images/tarte-aux-pommes.svg" alt="Une croûte épaisse, une mie souple. Il se garde quatre jours.">
+                    <p>Pommes du verger voisin, pâte sablée maison. Pour 6 personnes.</p>
+                    <p class="prix">18,00 €</p>    
+                    <button type="button" class="produit-bouton">Commander</button>
+                </article>
+                <article class="produit">
+                    <h3>Cookie</h3>
+                    <img src="ressources/images/cookie.svg" alt="Une croûte épaisse, une mie souple. Il se garde quatre jours.">
+                    <p>Gros éclats de chocolat noir, cœur fondant.</p>
+                    <p class="prix">2,10 €</p>    
+                    <button type="button" class="produit-bouton">Commander</button>
+                </article>
+            </div>
+            <button type="button" id="bouton-corbeille">Vider le panier</button>
+            </section>
+        <!--NOS HORAIRES-->
+        <section id="horaires">
+        <h2>Nos horaires</h2>
+        <button type="button" id="bouton-horaires">Afficher les horaires</button>
+        <table id="table-horaires" class="cache">
+            <tr>
+                <th>Jour</th>
+                <th>Horaires</th>
+            </tr>
+            <tr>
+                <td>Du mardi au vendredi</td>
+                <td>7 h - 19 h</td>
+            </tr>
+            <tr>
+                <td>Samedi</td>
+                <td>7 h - 13 h</td>
+            </tr>
+            <tr>
+                <td>Dimanche</td>
+                <td>7 h - 12 h 30</td>
+            </tr>
+            <tr>
+                <td>Lundi</td>
+                <td>Fermé</td>
+            </tr>
+        </table>
+        </section>
+        <!--NOUS ÉCRIRE-->
+        <section id="nous-ecrire">
+            <h2>Nous écrire</h2>
+            <p>Une commande spéciale ? Un gâteau d'anniversaire ? Écrivez-nous.</p>
+            
+            <form>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom">
+                <label for="email">Votre e-mail</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Votre message</label>
+                <textarea name="message" id="message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!--LE PIED DE PAGE-->
+        <p>Le Fournil de Léa, 12 rue des Lilas</p>
+        <a href="">Mentions légales</a>
+    </footer>
+</body>
+
+</html>
